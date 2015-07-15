@@ -38,17 +38,42 @@ class Desafio2 implements Solucion
 
     }//fin del metodo convertir
 
+    //agrega x dependiendo de las ocurrencias en la palabra
     String agregarX(String entrada)
     {
         int contadorX = 0
-        int incrementos = 0;
+        int incrementos = 1;
+        String cadena
+        String cadenaResultante = ""
         println "Lo que entro: ${entrada}"
-        /*
+
         for(int i = 0; i < entrada.length(); i++)
         {
-            String cadena = entrada.substring(i, incremento++)
-        }*/
+            cadena = entrada.substring(i,incrementos++)
+            if(cadena == 'x' || cadena == 'X')
+            {
+                contadorX++
+                cadenaResultante = cadenaResultante + ponerX.call(contadorX)
+            }
+            cadenaResultante = cadenaResultante + cadena
+            //println "${cadena}"
+        }
+        //cadenaResultante = cadenaResultante + ponerX.call(contadorX)
 
+        println "La cadena ${entrada} tiene ${contadorX} x"
+        println "La cadena final:${cadenaResultante}"
+    }//fin del metodo agregarX
+
+    //closures para poner x
+    def ponerX = { contador ->
+        String cadena = ""
+
+        for (int i = 0; i < contador - 1; i++)
+        {
+            cadena = cadena + 'x'
+        }
+
+        return cadena;
 
     }
 
