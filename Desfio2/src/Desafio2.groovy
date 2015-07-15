@@ -25,6 +25,11 @@ class Desafio2 implements Solucion
             {
 
                 cadenaResultante = cadenaResultante + 'x'
+            }else if(cadena == ' '){
+                //println "Hay esapcios"
+                cadenaResultante = cadenaResultante + cadena
+                agregarX(cadenaResultante)
+
             }else{
                 cadenaResultante = cadenaResultante + cadena
             }
@@ -32,5 +37,19 @@ class Desafio2 implements Solucion
         println "Cadena que sale: ${cadenaResultante}"
 
     }//fin del metodo convertir
+
+    String agregarX(String entrada)
+    {
+        int contadorX = 0
+        int incrementos = 0;
+        println "Lo que entro: ${entrada}"
+        /*
+        for(int i = 0; i < entrada.length(); i++)
+        {
+            String cadena = entrada.substring(i, incremento++)
+        }*/
+
+
+    }
 
 }
