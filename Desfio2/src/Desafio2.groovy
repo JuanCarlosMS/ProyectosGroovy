@@ -14,6 +14,7 @@ class Desafio2 implements Solucion
     String convertir(String entrada)
     {
         String cadenaResultante = ""
+        String cadenaFinal = ""
         int incremento = 1
         println "La cadena que entro en el construcotor ${entrada}"
         for(int i = 0; i < entrada.length(); i++)
@@ -28,13 +29,14 @@ class Desafio2 implements Solucion
             }else if(cadena == ' '){
                 //println "Hay esapcios"
                 cadenaResultante = cadenaResultante + cadena
-                agregarX(cadenaResultante)
+                cadenaFinal = agregarX(cadenaResultante)
 
             }else{
                 cadenaResultante = cadenaResultante + cadena
+                cadenaFinal = agregarX(cadenaResultante)
             }
         }
-        println "Cadena que sale: ${cadenaResultante}"
+        println "Cadena que sale: ${cadenaFinal}"
 
     }//fin del metodo convertir
 
@@ -45,7 +47,7 @@ class Desafio2 implements Solucion
         int incrementos = 1;
         String cadena
         String cadenaResultante = ""
-        println "Lo que entro: ${entrada}"
+        //println "Lo que entro: ${entrada}"
 
         for(int i = 0; i < entrada.length(); i++)
         {
@@ -60,8 +62,9 @@ class Desafio2 implements Solucion
         }
         //cadenaResultante = cadenaResultante + ponerX.call(contadorX)
 
-        println "La cadena ${entrada} tiene ${contadorX} x"
-        println "La cadena final:${cadenaResultante}"
+        //println "La cadena ${entrada} tiene ${contadorX} x"
+        //println "La cadena final:${cadenaResultante}"
+        return cadenaResultante
     }//fin del metodo agregarX
 
     //closures para poner x
@@ -75,6 +78,6 @@ class Desafio2 implements Solucion
 
         return cadena;
 
-    }
+    }//fin del closure
 
 }
