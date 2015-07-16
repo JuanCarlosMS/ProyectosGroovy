@@ -9,10 +9,21 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Bienvenvio a Grails</title>
+    <title>Renderisar Dominio</title>
 </head>
 
 <body>
-    <p>Hola Mundo</p>
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>Edad</td>
+        </tr>
+        <g:each in="${list}" var="person">
+        <tr>
+            <td>${person.segundoNombre}, ${person.primerNombre}</td>
+            <td>${person.age}</td>
+        </tr>
+            </g:each>
+    </table>
 </body>
 </html>
