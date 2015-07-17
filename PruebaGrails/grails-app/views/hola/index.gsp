@@ -13,17 +13,12 @@
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td>Nombre</td>
-            <td>Edad</td>
-        </tr>
-        <g:each in="${list}" var="person">
-        <tr>
-            <td>${person.segundoNombre}, ${person.primerNombre}</td>
-            <td>${person.age}</td>
-        </tr>
-            </g:each>
-    </table>
+<g:each in="${personas}" var="personas" status="i">
+    <h3>${i+1}. ${personas.primerNombre}, ${personas.segundoNombre}</h3>
+    <p>
+        Age: ${personas.edad}
+    </p>
+
+</g:each>
 </body>
 </html>
